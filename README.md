@@ -1,5 +1,6 @@
 ### React app with various small components ready to use
 
-#### additional packages
+#### Additional packages
 - prop-types - library for validate props flowing into component
 - TailwindCSS - CSS library with singular styling rule in each  selector
+- classnames - JS library for building up a 'className' string based on different values
