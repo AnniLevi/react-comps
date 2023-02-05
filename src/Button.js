@@ -9,6 +9,7 @@ function Button({
   danger,
   outline,
   rounded,
+  ...rest
 }) {
   const classes = classnames("flex items-center px-3 py-1.5 border", {
     // 'px-3 py-1.5 border' will be always included
@@ -26,7 +27,11 @@ function Button({
     "text-red-500": outline && danger,
   }); // the key will be included only if the value is true
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button {...rest} className={classes}>
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {
