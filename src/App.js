@@ -1,3 +1,10 @@
+import {
+  GoBell,
+  GoCloudDownload,
+  GoComment,
+  GoGear,
+  GoFileMedia,
+} from "react-icons/go";
 import Button from "./Button";
 
 function App() {
@@ -5,22 +12,33 @@ function App() {
     <div>
       <div>
         <Button success rounded outline>
+          <GoBell />
           Click me
         </Button>
       </div>
       <div>
         <Button danger outline>
+          <GoCloudDownload />
           Buy now
         </Button>
       </div>
       <div>
-        <Button warning>See deal</Button>
+        <Button warning>
+          <GoComment />
+          See deal
+        </Button>
       </div>
       <div>
-        <Button secondary outline>Hide ads</Button>
+        <Button secondary outline>
+          <GoGear />
+          Hide ads
+        </Button>
       </div>
       <div>
-        <Button primary rounded>Something</Button>
+        <Button primary rounded>
+          <GoFileMedia />
+          Something
+        </Button>
       </div>
     </div>
   );
