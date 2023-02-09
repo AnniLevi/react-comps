@@ -1,47 +1,25 @@
-import {
-  GoBell,
-  GoCloudDownload,
-  GoComment,
-  GoGear,
-  GoFileMedia,
-} from "react-icons/go";
-import Button from "./components/Button";
+import Accordion from "./components/Accordion";
 
 function App() {
-  return (
-    <div>
-      <div>
-        <Button success rounded outline className='mb-5'>
-          <GoBell />
-          Click me
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          <GoCloudDownload />
-          Buy now
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoComment />
-          See deal
-        </Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <GoGear />
-          Hide ads
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          <GoFileMedia />
-          Something
-        </Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: "ewqr14",
+      label: "Can I use React on a project?",
+      content: "You can use React on any project you want",
+    },
+    {
+      id: "fd543h",
+      label: "Can I use Javascript on a project?",
+      content: "You can use Javascript on any project you want",
+    },
+    {
+      id: "fhcs43",
+      label: "Can I use CSS on a project?",
+      content: "You can use CSS on any project you want",
+    },
+  ];
+
+  return <Accordion items={items} />;
 }
 
 export default App;
