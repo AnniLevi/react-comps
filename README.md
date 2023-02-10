@@ -3,6 +3,7 @@
 #### Components
 - Button
 - Accordion
+- Dropdown
 
 #### Additional packages
 - prop-types - library for validate props flowing into component
