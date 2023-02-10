@@ -1,9 +1,28 @@
 import { GoTriangleDown, GoTriangleLeft } from "react-icons/go";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Panel from "./Panel";
 
 function Dropdown({ options, value, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const divEl = useRef();
+
+  useEffect(() => {
+    const handler = (event) => {
+      if (!divEl.current) {
+        return;
+      }
+      if (!divEl.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    // third argument 'true' sets up event handler for the capture phase
+    document.addEventListener("click", handler, true);
+
+    return () => {
+      document.removeEventListener("click", handler);
+    };
+  }, []);
 
   const handleClick = () => {
     // setIsOpen(!isOpen); // set state directly
@@ -30,7 +49,7 @@ function Dropdown({ options, value, onChange }) {
   // value?.label - "?" checks if value is null or undefined and if yes, the entire expression will be undefined
 
   return (
-    <div className="w-48 relative">
+    <div ref={divEl} className="w-48 relative">
       <Panel
         className="flex justify-between items-center cursor-pointer"
         onClick={handleClick}
