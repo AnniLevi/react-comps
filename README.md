@@ -1,6 +1,7 @@
 ### React app with various small components ready to use
 
 #### Components
+- Sidebar
 - Button
 - Accordion
 - Dropdown
