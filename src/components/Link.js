@@ -1,8 +1,10 @@
-import { useContext } from "react";
-import NavigationContext from "../context/navigation";
+import classNames from "classnames";
+import useNavigation from "../hooks/use-navigation";
 
 function Link({ to, children }) {
-  const { navigate } = useContext(NavigationContext);
+  const { navigate } = useNavigation();
+
+  const classes = classNames("text-blue-500");
 
   const handleClick = (event) => {
     // if user holds down the 'ctrl' ('command') key and then clicks on the link,
@@ -20,7 +22,7 @@ function Link({ to, children }) {
   };
 
   return (
-    <a href={to} onClick={handleClick}>
+    <a className={classes} href={to} onClick={handleClick}>
       {children}
     </a>
   );
