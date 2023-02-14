@@ -5,6 +5,7 @@
 - Button
 - Accordion
 - Dropdown
+- Modal Window
 
 #### Additional packages
 - prop-types - library for validate props flowing into component
