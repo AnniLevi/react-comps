@@ -1,4 +1,4 @@
-### React app with various small components ready to use
+### React app with various reusable components
 
 #### Components
 - Sidebar
@@ -6,6 +6,7 @@
 - Accordion
 - Dropdown
 - Modal Window
+- Table
 
 #### Additional packages
 - prop-types - library for validate props flowing into component
