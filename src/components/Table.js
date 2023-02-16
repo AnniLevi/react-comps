@@ -1,5 +1,12 @@
+import { Fragment } from "react";
+
 function Table({ data, config, keyFn }) {
   const renderedHeaders = config.map((column) => {
+    if (column.header) {
+      // Fragment is used when we need to provide a key prop or sth like that,
+      // but we don't want to have anything show up in the DOM
+      return <Fragment key={column.label}>{column.header()}</Fragment>;
+    }
     return <th key={column.label}>{column.label}</th>;
   });
 
